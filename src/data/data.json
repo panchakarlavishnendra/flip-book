@@ -1,0 +1,59 @@
+{
+	"arrayOfProducts": [
+		{
+			"id":1,
+			"imgUrl": "https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w=w480-h960-rw",
+			"name": "COMPANY PROFILE 0",
+			"author": "Bilkis Ismail",
+			"prDate": "26 April 2019",
+			"price": 110,
+            "details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quo velit consequuntur, iste, impedit dignissimos vitae nesciunt et commodi quos quis iusto est iure tenetur eum amet quas temporibus esse praesentium incidunt sequi ratione. Fuga ab quas itaque enim, molestiae, totam, necessitatibus magni dolores eligendi obcaecati libero omnis iste. Facilis.",
+            "fileLocation":"",
+            "fileDownloadUrl":""
+		},
+		{
+			"id":2,
+			"imgUrl": "https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w=w480-h960-rw",
+			"name": "COMPANY PROFILE 1",
+			"author": "Bilkis Ismail",
+			"prDate": "26 April 2019",
+			"price": 210,
+            "details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quo velit consequuntur, iste, impedit dignissimos vitae nesciunt et commodi quos quis iusto est iure tenetur eum amet quas temporibus esse praesentium incidunt sequi ratione. Fuga ab quas itaque enim, molestiae, totam, necessitatibus magni dolores eligendi obcaecati libero omnis iste. Facilis.",
+            "fileLocation":"",
+            "fileDownloadUrl":""
+		},
+		{
+			"id":3,
+			"imgUrl": "https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w=w480-h960-rw",
+			"name": "COMPANY PROFILE 2",
+			"author": "Bilkis Ismail",
+			"prDate": "26 April 2019",
+			"price": 150,
+            "details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quo velit consequuntur, iste, impedit dignissimos vitae nesciunt et commodi quos quis iusto est iure tenetur eum amet quas temporibus esse praesentium incidunt sequi ratione. Fuga ab quas itaque enim, molestiae, totam, necessitatibus magni dolores eligendi obcaecati libero omnis iste. Facilis.",
+            "fileLocation":"",
+            "fileDownloadUrl":""
+		},
+		{
+			"id":4,
+			"imgUrl": "https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w=w480-h960-rw",
+			"name": "COMPANY PROFILE 3",
+			"author": "Bilkis Ismail",
+			"prDate": "26 April 2019",
+			"price": 320,
+            "details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quo velit consequuntur, iste, impedit dignissimos vitae nesciunt et commodi quos quis iusto est iure tenetur eum amet quas temporibus esse praesentium incidunt sequi ratione. Fuga ab quas itaque enim, molestiae, totam, necessitatibus magni dolores eligendi obcaecati libero omnis iste. Facilis.",
+            "fileLocation":"",
+            "fileDownloadUrl":""
+		},
+		{
+			"id":5,
+			"imgUrl": "https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w=w480-h960-rw",
+			"name": "COMPANY PROFILE 4",
+			"author": "Bilkis Ismail",
+			"prDate": "26 April 2019",
+			"price": 180,
+            "details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quo velit consequuntur, iste, impedit dignissimos vitae nesciunt et commodi quos quis iusto est iure tenetur eum amet quas temporibus esse praesentium incidunt sequi ratione. Fuga ab quas itaque enim, molestiae, totam, necessitatibus magni dolores eligendi obcaecati libero omnis iste. Facilis.",
+            "fileLocation":"",
+            "fileDownloadUrl":""
+		}
+	]
+}
