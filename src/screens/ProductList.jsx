@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductList = () => {
     const [productData, setProductData] = useState(Data.arrayOfProducts);
-    const [selectedProduct, setSelectedProduct] = useState(Data.arrayOfProducts[0]); 
+    const [selectedProduct, setSelectedProduct] = useState(); 
     const [searchData, setSearchData] = useState([]);
 
     const selectedData = (data)=>{
