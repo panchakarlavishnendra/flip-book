@@ -40,9 +40,18 @@ const ProductList = () => {
 
     return (
         <div className="h-100 bg-light rounded">
-            <div>
-            <input className="search-input" type="text" placeholder="Search.." name="search" />
-            <button className="search-button" type="submit"><i className="fa fa-search"></i></button>
+            <div className="row p-3">
+                <div className="col-md-5 mx-auto">
+                    <div className="input-group">
+                        <input
+                            className="form-control border rounded-pill"
+                            type="search"
+                            placeholder="search"
+                            id="example-search-input"
+                            onChange={(e)=>{onHandelInputChange(e)}}
+                        />
+                    </div>
+                </div>
             </div>
 
             <div className="p-4 d-flex">

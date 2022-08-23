@@ -53,9 +53,9 @@ const ProductDetails = (props) => {
             : ""}
             </div>
             
-            <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+            <Modal show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
                 <Modal.Header closeButton></Modal.Header>
-                <Modal.Body className="pb-5">
+                <Modal.Body className="pb-2">
                     <div className="flipContainer">
                         <PageFlip productDetail={productDetail}/>
                     </div>
