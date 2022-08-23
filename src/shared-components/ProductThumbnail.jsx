@@ -4,12 +4,13 @@ import pdf from '../pdf/pdf.pdf';
 
 const ProductThumbnail = (props) =>{
     const [thumbList,setThumbList] = useState([]);
-    const [selectedThumbnail, setSelectedThumbnail] = useState(0); 
+    const [selectedThumbnail, setSelectedThumbnail] = useState(); 
     useEffect(()=>{
         setThumbList(props.productData);
     },[props]);
 
     const selectProduct = (i) =>{
+        console.log(i,"iiiiiiiii")
         setSelectedThumbnail(i);
         props.selectedData(thumbList[i]);
     }

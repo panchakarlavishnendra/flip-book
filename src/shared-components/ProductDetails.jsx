@@ -5,7 +5,8 @@ import Modal from 'react-bootstrap/Modal';
 import pdf from '../pdf/pdf.pdf';
 import PageFlip from "./pageFlip";
 const ProductDetails = (props) => {
-    const [productDetail,setProductdetail] = useState([]);
+    console.log(props,"prop-1")
+    const [productDetail,setProductdetail] = useState({});
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -25,10 +26,14 @@ const ProductDetails = (props) => {
         }
         
     }
+    console.log(productDetail,"productDetail")
     return(
+        
         <>
-        <div className="product-details-container">
-                <div className="row p-5">
+        <div>
+        {productDetail !== undefined ? 
+         <div className="product-details-container">
+                <div className="row p-5" >
                     <div className="product-details order-sm-1 order-md-0 col-sm-12 col-md-8">
                             <h2 className="mb-4">{productDetail.name}</h2>
                             <h4 className="text-muted">{productDetail.author} <small>{productDetail.prDate}</small></h4>
@@ -45,6 +50,9 @@ const ProductDetails = (props) => {
                             </div>
                 </div>
             </div>
+            : ""}
+            </div>
+            
             <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
                 <Modal.Header closeButton>
                 {/* <Modal.Title>Modal heading</Modal.Title> */}

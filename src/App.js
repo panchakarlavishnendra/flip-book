@@ -4,7 +4,7 @@ import {Container} from 'react-bootstrap';
 
 function App() {
   return (
-    <Container className='p-5'>
+    <Container className='p-1'>
     <ProductList />
     </Container>
   );

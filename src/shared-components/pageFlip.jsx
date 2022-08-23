@@ -43,7 +43,7 @@ const PageFlip = () => {
         ref={book}
       >
         <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
+        {/* <Custom></Custom> */}
         </div>
         <div className="page">
           <img src="https://picsum.photos/510/300?random" alt="person" />
