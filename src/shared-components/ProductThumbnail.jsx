@@ -10,7 +10,6 @@ const ProductThumbnail = (props) =>{
     },[props]);
 
     const selectProduct = (i) =>{
-        console.log(i,"iiiiiiiii")
         setSelectedThumbnail(i);
         props.selectedData(thumbList[i]);
     }

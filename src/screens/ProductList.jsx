@@ -18,10 +18,8 @@ const ProductList = () => {
 
     const onHandelInputChange = (e) =>{
         let tempData = [];
-        console.log(Data,e.target.value,"Data");
         Data.arrayOfProducts.map((element)=>{
-            if (element.name.includes(e.target.value)){
-                console.log(element,"element");
+            if (element.name.toLowerCase().includes(e.target.value.toLowerCase())){
                 tempData.push(element);
             }
         })
@@ -32,8 +30,8 @@ const ProductList = () => {
             setSelectedProduct(tempData[0]);
             setSearchData(tempData);
         }else{
-            setProductData(Data.arrayOfProducts);
-            setSelectedProduct(Data.arrayOfProducts[0]);
+            setProductData([]);
+            // setSelectedProduct(Data.arrayOfProducts[0]);
             setSearchData([]);
         }
     }
