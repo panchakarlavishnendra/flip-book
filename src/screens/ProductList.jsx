@@ -9,28 +9,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductList = () => {
     const [productData, setProductData] = useState(Data.arrayOfProducts);
-    const [selectedProduct, setSelectedProduct] = useState();
-    const selectedData = (data) => {
+    const [selectedProduct, setSelectedProduct] = useState(Data.arrayOfProducts[0]); 
+    const [searchData, setSearchData] = useState([]);
+
+    const selectedData = (data)=>{
         setSelectedProduct(data);
     }
+
+    const onHandelInputChange = (e) =>{
+        let tempData = [];
+        console.log(Data,e.target.value,"Data");
+        Data.arrayOfProducts.map((element)=>{
+            if (element.name.includes(e.target.value)){
+                console.log(element,"element");
+                tempData.push(element);
+            }
+        })
+
+        
+        if (tempData[0]){
+            setProductData(tempData);
+            setSelectedProduct(tempData[0]);
+            setSearchData(tempData);
+        }else{
+            setProductData(Data.arrayOfProducts);
+            setSelectedProduct(Data.arrayOfProducts[0]);
+            setSearchData([]);
+        }
+    }
+
     return (
         <div className="h-100 bg-light rounded">
-            <div className="row p-3">
-                <div className="col-md-5 mx-auto">
-                    <div className="input-group">
-                        <input
-                            className="form-control border rounded-pill"
-                            type="search"
-                            placeholder="search"
-                            id="example-search-input"
-                        />
-                    </div>
-                </div>
+            <div>
+            <input className="search-input" type="text" placeholder="Search.." name="search" />
+            <button className="search-button" type="submit"><i className="fa fa-search"></i></button>
             </div>
+
             <div className="p-4 d-flex">
-                <ProductThumbnail productData={productData} selectedData={selectedData} />
+                <ProductThumbnail productData={productData} selectedData={selectedData}/>
                 <ProductDetails selectedProduct={selectedProduct} />
             </div>
+            
         </div>
 
     )

@@ -1,119 +1,40 @@
-//import "./styles.css";
+import React, { Component } from 'react';
 import HTMLFlipBook from "react-pageflip";
-import { useEffect, useRef, useState } from "react";
-import useWindowWide from "../utils/useWidth";
-const PageFlip = () => {
-  const [width, setWidth] = useState(800);
-  const [height, setHeight] = useState(500);
-  const widthScreen = useWindowWide();
-  const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(0);
-  const book = useRef();
 
-  useEffect(() => {
-    if (widthScreen < 600) {
-      setWidth(400);
-      setHeight(300);
-    } else {
-      setWidth(Math.ceil((0.9 * widthScreen) / 2));
-      setHeight(Math.ceil((0.6 * widthScreen) / 2));
-    }
-  }, [widthScreen]);
+class pageFlip extends Component {
+  constructor(props) {
+    super(props);
+  }
+  state = {  }
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTotal(book.current.pageFlip().getPageCount());
-    }, 1000);
-  }, []);
+  importAll(r) {
+    return r.keys().map(r);
+  }
 
-  const updatePage = ({ data }) => setPage(data + 2);
+  render() { 
+    let productDetail = this.props;
+    let images,bookImg=[];
+      
+    images = this.importAll(require.context("../images", false, /\.(png|jpe?g|svg)$/));
+    
+    images && images.map((element)=>{
+      if (element.includes(`${productDetail.productDetail.code}`)){
+        bookImg.push(element)
+      }
+    })
 
-  return (
-    <div className="flex" style={{ padding: "50px 0" }}>
-      <span
-        onClick={() => book.current.pageFlip().flipNext()}
-        className={"next button"}
-      >
-        <i className="fas fa-chevron-right"></i>
-      </span>
-      <HTMLFlipBook
-        onFlip={updatePage}
-        width={width}
-        height={height}
-        ref={book}
-      >
-        <div className="page">
-        {/* <Custom></Custom> */}
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
-        <div className="page">
-          <img src="https://picsum.photos/510/300?random" alt="person" />
-        </div>
+    return ( <div>
+      <HTMLFlipBook width={300} height={500}>
+        {bookImg && bookImg.map((element)=>{
+          return (
+            <div className="demoPage">
+              <img src={element} alt="person" width={"300px"} height={"500px"}/>
+            </div>
+          )
+        })}
       </HTMLFlipBook>
-      <span
-        onClick={() => book.current.pageFlip().flipPrev()}
-        className={"previous button"}
-      >
-        <i className="fas fa-chevron-left"></i>
-      </span>
-      <span className="info-page">
-        {page} - {total}
-      </span>
-    </div>
-  );
+    </div> );
+  }
 }
-
-export default PageFlip;
+ 
+export default pageFlip;

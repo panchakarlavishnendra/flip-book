@@ -21,8 +21,8 @@ const ProductThumbnail = (props) =>{
         {
             thumbList.map((product, index)=> { return(
                 <div className={`d-flex align-items-center flex-column p-3 my-2 bg-white border ${selectedThumbnail===index? "active":""}`} key={product.id} onClick={()=>selectProduct(index)}>
-                {/* <img className="rounded-circle flex-shrink-0" src="images/img1.png" alt="Pic 1"/> */}
-                <PdfThumbnail height={100} width={70} page={1} fileLocation={product.fileLocation?product.fileLocation:pdf}/>
+                <img className="flex-shrink-0" src={product.imgUrl} alt="Pic 1"/>
+                {/* <PdfThumbnail height={100} width={70} page={1} fileLocation={product.fileLocation?product.fileLocation:pdf}/> */}
                 <div className="w-100 pt-3">
                         <h6 className="text-truncate">{product.name}</h6>
                         <small>{product.author} {product.prDate}</small>
