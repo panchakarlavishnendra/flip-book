@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.prdt-mbody{
+  padding-left: 100px !important;
+}
+.modal-dialog{
+  margin-top: 5px !important;
+}
