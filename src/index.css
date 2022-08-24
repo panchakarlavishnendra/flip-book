@@ -23,6 +23,21 @@ code {
   min-width: 150px;
   padding: 10px auto;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-view{
+  width: 20em;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+.card-view:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: 1px solid #FFA500;
 }
 
 .product-thum-conatiner img{

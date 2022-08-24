@@ -10,3 +10,8 @@
 .flex-shrink-1{
     height: 299px !important;
 }
+
+
+.back-btn{
+    margin-left: 2em;
+}

@@ -3,9 +3,8 @@ import ProductThumbnail from "../shared-components/ProductThumbnail";
 import ProductDetails from "../shared-components/ProductDetails";
 import Data from "../data/data.json";
 import './ProductList.css';
-import { Navbar, Nav, form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Button from 'react-bootstrap/Button';
 
 const ProductList = () => {
     const [productData, setProductData] = useState(Data.arrayOfProducts);
@@ -24,16 +23,16 @@ const ProductList = () => {
             }
         })
 
+        console.log(tempData[0])
         
         if (tempData[0]){
             setProductData(tempData);
-            setSelectedProduct(tempData[0]);
-            setSearchData(tempData);
+            setSelectedProduct([]);
         }else{
             setProductData([]);
-            // setSelectedProduct(Data.arrayOfProducts[0]);
-            setSearchData([]);
+            setSelectedProduct([]);
         }
+
     }
 
     return (
@@ -51,11 +50,22 @@ const ProductList = () => {
                     </div>
                 </div>
             </div>
+            
+            {selectedProduct && selectedProduct.id?<Button className="back-btn" onClick={()=>{ setSelectedProduct([])}} variant="outline-secondary">Back</Button>:""}
+            {
+                productData && productData.length ? <div className="product-over-view">
+                    {selectedProduct && selectedProduct.id?
+                        <ProductDetails selectedProduct={selectedProduct} />
+                        :
+                        <ProductThumbnail productData={productData} selectedData={selectedData}/>
+                        // ""
+                    }
+                    {/* <ProductThumbnail productData={productData} selectedData={selectedData}/> */}
+                    {/* <ProductDetails selectedProduct={selectedProduct} /> */}
+                </div> :"No result found"
+            }
 
-            <div className="p-4 d-flex">
-                <ProductThumbnail productData={productData} selectedData={selectedData}/>
-                <ProductDetails selectedProduct={selectedProduct} />
-            </div>
+            
             
         </div>
 

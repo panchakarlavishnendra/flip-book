@@ -19,7 +19,7 @@ const ProductThumbnail = (props) =>{
         <div className="product-thum-conatiner">
         {
             thumbList.map((product, index)=> { return(
-                <div className={`d-flex align-items-center flex-column p-3 my-2 bg-white border ${selectedThumbnail===index? "active":""}`} key={product.id} onClick={()=>selectProduct(index)}>
+                <div className={`card-view`} key={product.id} onClick={()=>selectProduct(index)}>
                 <img className="flex-shrink-0" src={product.imgUrl} alt="Pic 1"/>
                 {/* <PdfThumbnail height={100} width={70} page={1} fileLocation={product.fileLocation?product.fileLocation:pdf}/> */}
                 <div className="w-100 pt-3">
