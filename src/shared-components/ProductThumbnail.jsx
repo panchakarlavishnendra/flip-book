@@ -24,7 +24,7 @@ const ProductThumbnail = (props) =>{
                 {/* <PdfThumbnail height={100} width={70} page={1} fileLocation={product.fileLocation?product.fileLocation:pdf}/> */}
                 <div className="w-100 pt-3">
                         <h6 className="text-truncate">{product.name}</h6>
-                        <small>{product.author} {product.prDate}</small>
+                        <small>{product.author}</small>
                 </div>
                 
                 </div>

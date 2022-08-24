@@ -36,9 +36,14 @@ const ProductList = () => {
     }
 
     return (
-        <div className="h-100 bg-light rounded">
+        <div className="h-100  rounded">
+            
             <div className="row p-3">
-                <div className="col-md-5 mx-auto">
+                
+                <div className="flex prdt-list-header">
+                    <div className="back-btn-class">
+                {selectedProduct && selectedProduct.id?<Button className="back-btn" onClick={()=>{ setSelectedProduct([])}} variant="outline-secondary">Back</Button>:""}
+                </div>
                     <div className="input-group">
                         <input
                             className="form-control border rounded-pill"
@@ -50,8 +55,6 @@ const ProductList = () => {
                     </div>
                 </div>
             </div>
-            
-            {selectedProduct && selectedProduct.id?<Button className="back-btn" onClick={()=>{ setSelectedProduct([])}} variant="outline-secondary">Back</Button>:""}
             {
                 productData && productData.length ? <div className="product-over-view">
                     {selectedProduct && selectedProduct.id?

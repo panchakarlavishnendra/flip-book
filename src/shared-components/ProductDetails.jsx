@@ -35,7 +35,7 @@ const ProductDetails = (props) => {
                         <div className="row p-5" >
                             <div className="product-details order-sm-1 order-md-0 col-sm-12 col-md-8">
                                 <h2 className="mb-4">{productDetail.name}</h2>
-                                <h4 className="text-muted">{productDetail.author} <small>{productDetail.prDate}</small></h4>
+                                <h4 className="text-muted">{productDetail.author} </h4>
                                 <hr className="mt-5" />
                                 <p className="py-5">{productDetail.details}</p>
                                 <div className="button-container d-flex flex-sm-column flex-md-row flex-sm-wrap flex-md-nowrap align-item-center justify-content-between">
@@ -68,7 +68,7 @@ const ProductDetails = (props) => {
                 centered
                 className="prdt-modal"
                 >
-                <Modal.Header closeButton>
+                <Modal.Header closeButton >
                 </Modal.Header>
                 <Modal.Body className="prdt-mbody" centered> <PageFlip productDetail={productDetail} /></Modal.Body>
             </Modal>
