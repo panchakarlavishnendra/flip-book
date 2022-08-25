@@ -4,6 +4,8 @@ import PdfThumbnail from "./pdfThumbnail";
 import Modal from 'react-bootstrap/Modal';
 import pdf from '../pdf/pdf.pdf';
 import PageFlip from "./pageFlip";
+
+
 const ProductDetails = (props) => {
     const [productDetail, setProductdetail] = useState({});
     const [show, setShow] = useState(false);
@@ -65,12 +67,14 @@ const ProductDetails = (props) => {
                 show={show}
                 onHide={handleClose}
                 aria-labelledby="example-modal-sizes-title-lg"
-                centered
+                centered ="true"
                 className="prdt-modal"
                 >
                 <Modal.Header closeButton >
                 </Modal.Header>
-                <Modal.Body className="prdt-mbody" centered> <PageFlip productDetail={productDetail} /></Modal.Body>
+                <Modal.Body className="prdt-mbody" > <PageFlip productDetail={productDetail} /></Modal.Body>
+                {/* <Modal.Body className="prdt-mbody" > <MyBook productDetail={productDetail} /></Modal.Body> */}
+
             </Modal>
         </>
     )
