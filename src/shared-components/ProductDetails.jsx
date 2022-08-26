@@ -34,7 +34,7 @@ const ProductDetails = (props) => {
             <div>
                 {productDetail !== undefined ?
                     <div className="product-details-container">
-                        <div className="row p-5" >
+                        <div className="row p-2" >
                             <div className="product-details order-sm-1 order-md-0 col-sm-12 col-md-8">
                                 <h2 className="mb-4">{productDetail.name}</h2>
                                 <h4 className="text-muted">{productDetail.author} </h4>
